@@ -51,7 +51,9 @@ The locale is set to use UTF-8 encoding.
 The following environment variables are set:
 
 target_phase=SIT for the target deployment phase
+
 TRANSFORMERS_CACHE=/tmp/huggingface/ for the cache directory for Hugging Face Transformers
+
 ## Requirements
 Python dependencies specified in requirements.txt are installed.
 
