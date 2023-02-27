@@ -126,30 +126,17 @@ RUN set -eux; \
 	\
 	pip --version
 
-# Set the working directory to /app
-WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-# This assumes that the Dockerfile is in the same directory as the application code
-ADD . /app
 
 # Set the locale to use UTF-8 encoding
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 ENV LANGUAGE C.UTF-8
 
-# Set an environment variable for the target deployment phase
-ENV target_phase=SIT
 
 # Set the cache directory for Hugging Face Transformers
 ENV TRANSFORMERS_CACHE=/tmp/huggingface/
 
-# Install Python dependencies specified in requirements.txt
-RUN pip install -r requirements.txt
-
-
-# Set the default command to run when the container starts
-ENTRYPOINT [ "python" ]
 
 
 
